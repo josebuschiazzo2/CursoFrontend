@@ -1,0 +1,61 @@
+
+  .btngreen {
+    background-color: #97c93e;
+    color: white;
+  }
+  
+  .btngreen:hover {
+    background-color: #82ad36;
+  }
+  #header{
+  background: linear-gradient(90deg,#000000,#395566 75%, black);
+  }
+  
+  #header img {
+    width: 60px;
+  }
+  
+  #main .carousel-inner img {
+    max-height: 40vh;
+    object-fit: cover;
+    filter: grayscale(20%);
+  }
+  
+  #carousel {
+    position: relative;
+  }
+  
+  #carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  #carousel .overlay .container,
+  #carousel .overlay .row {
+    height: 100%;
+  }
+  
+  #contact{
+    background: linear-gradient(90deg,gray,black 70%);
+    color: white;
+  }
+  
+  #contact img {
+    max-width: 70%;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  
+  #footer {
+    background: linear-gradient(90deg,#080f13,#273b47 50%, #080f13);
+  }
+  
+  #footer a {
+    color: white;
+  }
