@@ -46,10 +46,11 @@
   }
   
   #contact img {
-    max-width: 70%;
+    max-width: 90%;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 1px;
     margin-left: 15px;
+    filter: grayscale(40%);
   }
   
   #footer {
