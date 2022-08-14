@@ -17,8 +17,9 @@ let AddList = () => {
   let miItem = document.createElement("li");
  
  if (ProdoctName[ProdoctName.length-1] == "Elige tu Producto...") alert("Harta wea po! pero si seara Weon!. Elija un Producto po al tiro");
- /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
+ 
   else{
+    /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
     switch(ProdoctName[ProdoctName.length-1]){
       case "Nano33":
         Preciodeproducto= 10;
@@ -82,7 +83,6 @@ Lista.removeChild(Lista.lastChild);
 Preciodeproducto= 0;
 
 /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
-
 switch(ProdoctName.pop()){
   case "Nano33":
     Preciodeproducto= 10;
@@ -121,7 +121,7 @@ switch(ProdoctName.pop()){
   break;
 } 
 
-/*Pongo esta linea para destuirlo del array cantidad, arriba Swith tb */
+/*Pongo esta linea para destuirlo del array cantidad, arriba Swith tb para el Array de ProductName */
 Subtotal= parseInt(arregloCantidad.pop(),10) * Preciodeproducto;
 
 total-=Subtotal;
