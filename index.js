@@ -85,7 +85,7 @@ Lista.removeChild(Lista.lastChild);
 
 /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
 switch(ProdoctName.pop()){
-  case "Nano33":
+  case "Nano---33B":
     Preciodeproducto= 10;
   break;
 
@@ -93,19 +93,19 @@ switch(ProdoctName.pop()){
     Preciodeproducto= 15;
   break;
 
-  case "NanoMotor":
+  case "Nano-Motor":
     Preciodeproducto= 20;
   break;
 
-  case "UNOR3":
+  case "UNO----R3":
     Preciodeproducto= 40;
   break;
 
-  case "UNORWIFI":
+  case "UNOR-WIFI":
     Preciodeproducto= 45;
   break;
 
-  case "UNOMINI":
+  case "UNO--MINI":
     Preciodeproducto= 35;
   break;
 
