@@ -5,7 +5,7 @@
     <meta name="description" content="Este es un proyecto de JB">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Acá esta lo de Bootstrap CSS -->
+    <!-- Acá esta lo de Bootstrap y CSS  Uso el 4.1.3 porque hice un mini-curso con eso-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <title>JB Electronics</title> <!-- se que no es un buen nombre para Marketing, pero es un TP-->
@@ -69,7 +69,7 @@
                   <p class="d-none d-md-block">
                     Venta de Kit Arduino en Tierra del Fuego. Los mejores precios lo encontras en nuestra tienda virtual. Te esperamos!
                   </p>
-                 <button type="button" class="btn btngreen" data-toggle="modal" data-target="#modalCompra">Catálogo</button>
+                 <button type="button" class="btn btngreen" data-toggle="modal" data-target="#modalCatalogo">Catálogo</button>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@
     <section id="contact" class="pt-1 pb-1 mt-1 mb-1 "> <!-- me rindo.. le estoy metiendo el pt pb mt y mb para que se ilumine el boton de merda arriba y naranja -->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 col-lg-5">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <img src="/home/jose/Escritorio/CursoFrontend/Nosetodavia/Imagen/Mapa.png" alt="Ubicación" />
           </div>
           <!-- el col-lg-6 lo voy a usar para que en dispositivos chicos se baje al medio -->
@@ -209,7 +209,7 @@
         </div>
 
         <div class="row">
-          <div class="col text-center">
+          <div class="col m-1">
              <!-- /voy a probar eso de la Question tooltip -->
             Completa el Nombre de producto a Agregar para que aparezca en la <abbr data-toggle="tooltip" title="la Lista se encuentra abajo">Lista</abbr>
           </div>
@@ -240,7 +240,7 @@
                     </select>
                 </div>
                 
-               
+               <!-- Lo dejo hasta 5 porque sí, "Esto lo hago Pa divertirme! Pa divertirme"-->
                 <div class="form-group col-12 col-md-6 col-lg-4 mb-2">
                   <select type="text" name="inputQ" class= "myQ custom-select" size="1">
                     <option selected>1</option>
@@ -254,18 +254,23 @@
             </div>            
               
               <div class="form-row">
-                <div class="col">
+                <div class="col-12">
                   <button type="button" class="addBtn btn btngreen">Agregar</button>
                   <button type="button" class="removeBtn btn btn-warning">Eliminar Ultimo Item</button>
                   <button type="button" class="removeallBtn btn btn-danger">Eliminar Todos</button>
-                  <ol class= "myol">
-                  </ol>
+                </div>
+              
+                <div class="row">
+                  <div class="col-12 m-2">
+                    <ol class= "myol">
+                    </ol>
+                  </div>  
                 </div>
               </div>      
 
             <div class="row">
-              <div class="col">
-                <button id= "btnbuy" type="button" class="buy btn btngreen">Comprar</button>
+              <div class="col-12 mt-2">
+                <button id= "btnbuy" type="button" class="buy btn btngreen" data-toggle="modal" data-target="#modalPago">Comprar</button>
               </div>
             </div>
           
@@ -275,7 +280,7 @@
     </section>
     <!-- /Agregar productos -->
 
-    <!-- Footer Todavia no hace ni merda-->
+    <!-- Footer - Todavia no hace ni merda pero queda lindo-->
     <footer id="footer" class="pb-2 pt-2">
       <div class="container">
         <div class="row text-center">
@@ -294,8 +299,8 @@
     </footer>
     <!-- /Footer -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- Modals -->
+    <div class="modal fade" id="modalCatalogo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -324,6 +329,62 @@
           <div class="modal-footer">
             <button type="button" class="btn btngray" data-dismiss="modal">Cancelar</button>
             <button type="button" class="btn btngreen">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalPago" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Forma de Pago</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                 
+            <div class="form-group col-12 col-md-8 col-lg-11 mb-1">
+              <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Tarjeta de Credito:</span>
+                </div>
+                <select type="text" name="Tarjeta" class= "mycard custom-select" size="1" aria-describedby="basic-addon2">
+                  <option selected>Elija su tarjeta de Credito</option>
+                  <option value="1">Visa</option>
+                  <option value="2">American Express</option>
+                  <option value="3">MasterCard</option>
+                  <option value="4">Naranja</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group col-12">
+              <input type="text" class="form-control mt-1" placeholder="Número de Tarjeta">
+              <input type="text" class="form-control mt-1" placeholder="Código">
+            </div>
+
+            <form>
+              <div class="form-row">
+                <div class="form-group col">
+                  <div class="input-group mt-3 mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">E-mail:</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="-@-.com.ar" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="alert alert-warning" role="alert">
+              Recibirás nuestro comprobante de pago al mail
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btngray" data-dismiss="modal">Cancelar</button>
+            <button id= "btnpay"type="button" class="btn btngreen">Pagar</button>
           </div>
         </div>
       </div>

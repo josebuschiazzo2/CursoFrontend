@@ -46,7 +46,7 @@
   }
   
   #contact img {
-    max-width: auto;
+    max-width: 65vh;
     text-align: center;
     margin-top: 1px;
     margin-left: 15px;
@@ -78,6 +78,10 @@
   }
 
   #btnprev{
-    filter: brightness(90%); 
+    filter: brightness(80%); 
     /*pongo esto porque sino no se ve el btn*/
     }
+  
+  .myol{
+    font-size: 1.9vw;
+  }
