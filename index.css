@@ -46,7 +46,7 @@
   }
   
   #contact img {
-    max-width: 65vh;
+    max-width: 55vh;
     text-align: center;
     margin-top: 1px;
     margin-left: 15px;
@@ -83,5 +83,5 @@
     }
   
   .myol{
-    font-size: 1.9vw;
+    font-size: 1.7vw;
   }

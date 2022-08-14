@@ -5,12 +5,12 @@
     <meta name="description" content="Este es un proyecto de JB">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Acá esta lo de Bootstrap y CSS  Uso el 4.1.3 porque hice un mini-curso con eso-->
+    <!-- Acá esta lo de Bootstrap y CSS  Uso el Bootstrap 4 porque hice un mini-curso con eso-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <title>JB Electronics</title> <!-- se que no es un buen nombre para Marketing, pero es un TP-->
   
-</head>
+  </head>
   <body data-spy="scroll" data-target="#navbar" data-offset="1">
     <!-- Header -->
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -100,6 +100,7 @@
                 </div>
                 <h5 class="card-title">Arduino Portenta H7</h5>
                 <p class="card-text">Program it with high-level languages and AI while performing low-latency operations on its customizable hardware</p>
+                <button type="button" class="btn1 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -113,6 +114,7 @@
                 </div>
                 <h5 class="card-title">Portenta X8</h5>
                 <p class="card-text">Leverage the Arduino environment to carry out real-time tasks while Linux takes care of high-performance processing</p>
+                <button type="button" class="btn2 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -127,6 +129,7 @@
                 </div>
                 <h5 class="card-title">Arduino Nano Motor Carrier</h5>
                 <p class="card-text">Designed to facilitate motor control, Nano Motor Carrier takes care of the electronics required to control motors, allowing students to focus on prototyping and building their projects. </p>
+                <button type="button" class="btn3 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -141,6 +144,7 @@
                 </div>
                 <h5 class="card-title">Arduino Nano 33</h5>
                 <p class="card-text">The board's main processor is a low power Arm® Cortex®-M0 32-bit SAMD21.</p>
+                <button type="button" class="btn4 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -155,6 +159,7 @@
                 </div>
                 <h5 class="card-title">Arduino Nano RP2040</h5>
                 <p class="card-text">Meet the only connected RP2040 board. It fits the Arduino Nano form factor, making it a small board with BIG features.</p>
+                <button type="button" class="btn5 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -168,6 +173,7 @@
                 </div>
                 <h5 class="card-title">Arduino UNO</h5>
                 <p class="card-text">The Arduino UNO is the best board to get started with electronics and coding.</p>
+                <button type="button" class="btn6 btn btngreen">Agregar a Carrito</button>
               </div>
             </div>
           </div>
@@ -222,15 +228,15 @@
                   <select type="text" name="inputTarea" class= "myInput custom-select" size="1">
                     <option selected>Elige tu Producto...</option>
                     <optgroup label="Arduino Nano">
-                      <option value="Nano33">Arduino Nano 33</option>
+                      <option value="Nano---33B">Arduino Nano 33</option>
                       <option value="NanoRP2040">Arduino Nano RP2040</option>
-                      <option value="NanoMotor">Arduino Nano Motor</option>
+                      <option value="Nano-Motor">Arduino Nano Motor</option>
                     </optgroup>
 
                     <optgroup label="Arduino UNO">
-                      <option value="UNOR3">Arduino UNO R3 </option>
-                      <option value="UNORWIFI">Arduino UNO WiFi </option>
-                      <option value="UNOMINI">Arduino UNO Mini </option>
+                      <option value="UNO----3R">Arduino UNO R3 </option>
+                      <option value="UNOR-WiFi">Arduino UNO WiFi </option>
+                      <option value="UNO--MINI">Arduino UNO Mini </option>
                     </optgroup>
                     <optgroup label="Pro">
                       <option value="PortentaH7">Arduino Portenta H7</option>
@@ -251,29 +257,36 @@
                   </select>
                 </div>
                
-            </div>            
+            </div>
+          </div>
+        </div>            
               
-              <div class="form-row">
-                <div class="col-12">
-                  <button type="button" class="addBtn btn btngreen">Agregar</button>
-                  <button type="button" class="removeBtn btn btn-warning">Eliminar Ultimo Item</button>
-                  <button type="button" class="removeallBtn btn btn-danger">Eliminar Todos</button>
-                </div>
-              
-                <div class="row">
-                  <div class="col-12 m-2">
-                    <ol class= "myol">
-                    </ol>
-                  </div>  
-                </div>
-              </div>      
+        <div class="row">
+          <div class="col">
+            <div class="form-row">
+              <div class="col-12">
+                <button type="button" class="addBtn btn btngreen">Agregar</button>
+                <button type="button" class="removeBtn btn btn-warning">Eliminar Ultimo Item</button>
+                <button type="button" class="removeallBtn btn btn-danger">Eliminar Todos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="row">
+          <div class="col-12">     
+            <div class="row">
+              <div class="col-12 mb-2 mt-2 ">
+                <ol class= "myol">
+                </ol>
+              </div>  
+            </div>             
 
             <div class="row">
               <div class="col-12 mt-2">
-                <button id= "btnbuy" type="button" class="buy btn btngreen" data-toggle="modal" data-target="#modalPago">Comprar</button>
+                <button disabled="true" id= "btnbuy" type="button" class="buy btn btngreen" data-toggle="modal" data-target="#modalPago">Comprar</button>
               </div>
             </div>
-          
           </div>
         </div>
       </div>
