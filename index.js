@@ -16,7 +16,12 @@ let AddList = () => {
   arregloCantidad.push(Cantidad.value);
   let miItem = document.createElement("li");
  
- if (ProdoctName[ProdoctName.length-1] == "Elige tu Producto...") alert("Harta wea po! pero si seara Weon!. Elija un Producto po al tiro");
+ if (ProdoctName[ProdoctName.length-1] == "Elige tu Producto...") 
+  {
+    alert("Harta wea po! pero si seara Weon!. Elija un Producto po al tiro");
+    ProdoctName.pop();
+    arregloCantidad.pop();
+  }
   else{
     /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
     switch(ProdoctName[ProdoctName.length-1]){
@@ -36,7 +41,7 @@ let AddList = () => {
         Preciodeproducto= 40;
       break;
 
-      case "UNOR-WIFI":
+      case "UNOR-WiFi":
         Preciodeproducto= 45;
       break;
 
@@ -67,6 +72,7 @@ let AddList = () => {
     document.getElementById("btnbuy").innerHTML="Comprar por &nbsp<b>$" + total + "</b>";
     document.getElementById("btnpay").innerHTML="Pagar &nbsp<b>$"  + total + "</b>";
     document.getElementById("btnbuy").disabled=false;
+    document.getElementById("btnremove").disabled=false;
   }
 }
 
@@ -75,14 +81,13 @@ Lista.innerHTML='';
 total=0;
 document.getElementById("btnbuy").innerHTML="Comprar";
 document.getElementById("btnpay").innerHTML="Pagar";
-document.getElementById("btnbuy").disabled=true;
+document.getElementById("btnremove").disabled=true;
 }
 
 
 let Deletlastitem=()=> {
 Lista.removeChild(Lista.lastChild);
-//Preciodeproducto= 0; lo saco porque no es necesario ahora
-
+Preciodeproducto= 0;
 /*Aca me tengo que ir a una base de dato en realidad pero pongo este Switch*/
 switch(ProdoctName.pop()){
   case "Nano---33B":
@@ -101,7 +106,7 @@ switch(ProdoctName.pop()){
     Preciodeproducto= 40;
   break;
 
-  case "UNOR-WIFI":
+  case "UNOR-WiFi":
     Preciodeproducto= 45;
   break;
 
@@ -126,14 +131,16 @@ switch(ProdoctName.pop()){
 Subtotal= parseInt(arregloCantidad.pop(),10) * Preciodeproducto;
 
 total-=Subtotal;
-  if (total==0) 
+  if (total<=0) 
     {
       document.getElementById("btnbuy").disabled=true;
       document.getElementById("btnbuy").innerHTML="Comprar";
+      document.getElementById("btnremove").disabled=true;
     } else {
     document.getElementById("btnbuy").innerHTML="Comprar por &nbsp<b>$" + total + "</b>";
     document.getElementById("btnpay").innerHTML="Pagar &nbsp<b>$"  + total + "</b>";
     document.getElementById("btnbuy").disabled=false;
+    document.getElementById("btnremove").disabled=false;
     }
 }
 
