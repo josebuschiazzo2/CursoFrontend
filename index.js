@@ -18,7 +18,7 @@ let AddList = () => {
  
  if (ProdoctName[ProdoctName.length-1] == "Elige tu Producto...") 
   {
-    alert("Harta wea po! pero si seara Weon!. Elija un Producto po al tiro");
+    alert("Elija un Producto por favor");
     ProdoctName.pop();
     arregloCantidad.pop();
   }
@@ -63,7 +63,7 @@ let AddList = () => {
  
     } 
   
-  Subtotal= Preciodeproducto * parseInt(arregloCantidad[arregloCantidad.length-1]);
+    Subtotal= Preciodeproducto * parseInt(arregloCantidad[arregloCantidad.length-1]);
     total+=Subtotal;
 
     miItem.innerHTML =  "<b>Cantidad: </b>" + Cantidad.value + "&nbsp &nbsp &nbsp <b>Producto: </b>" + Producto.value + "&nbsp &nbsp &nbsp <b>Precio:</b> $" + Preciodeproducto + "&nbsp &nbsp &nbsp <b>Sub-Total: </b> $" + Subtotal;
@@ -77,11 +77,11 @@ let AddList = () => {
 }
 
 let DeletList = () => {
-Lista.innerHTML='';
-total=0;
-document.getElementById("btnbuy").innerHTML="Comprar";
-document.getElementById("btnpay").innerHTML="Pagar";
-document.getElementById("btnremove").disabled=true;
+  Lista.innerHTML='';
+  total=0;
+  document.getElementById("btnbuy").innerHTML="Comprar";
+  document.getElementById("btnpay").innerHTML="Pagar";
+  document.getElementById("btnremove").disabled=true;
 }
 
 
@@ -132,49 +132,49 @@ Subtotal= parseInt(arregloCantidad.pop(),10) * Preciodeproducto;
 
 total-=Subtotal;
   if (total<=0) 
-    {
-      document.getElementById("btnbuy").disabled=true;
-      document.getElementById("btnbuy").innerHTML="Comprar";
-      document.getElementById("btnremove").disabled=true;
-    } else {
+  {
+    document.getElementById("btnbuy").disabled=true;
+    document.getElementById("btnbuy").innerHTML="Comprar";
+    document.getElementById("btnremove").disabled=true;
+  } else {
     document.getElementById("btnbuy").innerHTML="Comprar por &nbsp<b>$" + total + "</b>";
     document.getElementById("btnpay").innerHTML="Pagar &nbsp<b>$"  + total + "</b>";
     document.getElementById("btnbuy").disabled=false;
     document.getElementById("btnremove").disabled=false;
-    }
+  }
 }
 
 let bottonCard1=()=> {
- Producto.selectedIndex=7;
- Cantidad.selectedIndex=0;
-AddList();
+  Producto.selectedIndex=7;
+  Cantidad.selectedIndex=0;
+  AddList();
 }
 
 let bottonCard2=()=> {
   Producto.selectedIndex=8;
   Cantidad.selectedIndex=0;
- AddList();
+  AddList();
  }
 let bottonCard3=()=> {
   Producto.selectedIndex=3;
   Cantidad.selectedIndex=0;
- AddList();
+  AddList();
  }
 let bottonCard4=()=> {
   Producto.selectedIndex=1;
   Cantidad.selectedIndex=0;
- AddList();
+  AddList();
  }
- let bottonCard5=()=> {
+let bottonCard5=()=> {
   Producto.selectedIndex=2;
   Cantidad.selectedIndex=0;
- AddList();
- }
- let bottonCard6=()=> {
+  AddList();
+}
+let bottonCard6=()=> {
   Producto.selectedIndex=4;
   Cantidad.selectedIndex=0;
- AddList();
- }
+  AddList();
+}
 
 let botonAgregar = document.querySelector(".addBtn")
 botonAgregar.addEventListener("click", AddList);
